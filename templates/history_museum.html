@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}Explore the History Museum of Armenia{% endblock %}
+
+{% block content %}
+    <div class="city-image yerevan-city">
+        <img src="{{ url_for('static', filename='yerevan_city_museum.webp') }}" alt="Photo of History Museum of Armenia">
+    </div>
+
+    <h1>Explore the History Museum of Armenia</h1>
+
+    <div class="city-description">
+        <h2>🏛 A Journey Through Time</h2>
+        <p>Located in the heart of Republic Square, Yerevan, the History Museum of Armenia (Հայաստանի պատմության թանգարան – Hayastani Patmut’yan Tangaran) is one of the country’s most important cultural institutions. Founded in 1919, the museum offers a deep dive into the rich and complex history of Armenia — from prehistoric times to the modern era.</p>
+        <p>Whether you’re a first-time visitor or a lifelong local, Republic Square is a must-see landmark that captures the spirit and elegance of Yerevan.</p>
+
+        <h2>🧱 What You’ll Discover</h2>
+        <p>The museum houses over 400,000 artifacts, many of which are rare or even one-of-a-kind in the world. The exhibits are divided across several major sections:</p>
+        <h3>🏺 Archaeology</h3>
+        <ul>
+            <li>Tools and pottery from the Stone Age, Bronze Age, and Iron Age</li>
+            <li>Artifacts from Urartu, an ancient Armenian kingdom (9th–6th century BCE)</li>
+            <li>Ancient burial items, weapons, and religious relics</li>
+        </ul>
+        <h3>🧬 Ethnography</h3>
+        <ul>
+            <li>Traditional Armenian costumes, jewelry, carpets, and household items</li>
+            <li>Items showcasing rural Armenian life and craftsmanship</li>
+        </ul>
+        <h3>📜 Numismatics</h3>
+        <ul>
+            <li>One of the largest coin collections in the region, including coins from Armenian dynasties and foreign empires that ruled or traded with Armenia</li>
+        </ul>
+        <h3>🖼 Modern History</h3>
+        <ul>
+            <li>Items from the Armenian Genocide, the Soviet era, and Armenia’s independence in 1991</li>
+            <li>Photos, flags, and military memorabilia</li>
+        </ul>
+
+        <h2>🌍 A Unique Perspective on Global History</h2>
+        <p>The museum not only tells the story of Armenia but also connects it to world history. Armenia, situated between East and West, has been influenced by — and has influenced — a wide range of civilizations including the Romans, Persians, Greeks, Byzantines, Arabs, Ottomans, and Russians.</p>
+        <p>You’ll leave the museum with a much richer understanding of how Armenia shaped, and was shaped by, world events.</p>
+
+        <h2>📍 Practical Information</h2>
+        <ul>
+            <li>Address: Republic Square, Yerevan, Armenia</li>
+            <li>Hours: Open Tuesday to Sunday (Closed Mondays), typically 11:00 AM – 5:30 PM</li>
+            <li>Admission:</li>
+            <li>Adults: 1500 AMD ($4 USD)</li>
+            <li>Students & Seniors: Discounted</li>
+            <li>Children under 12: Free</li>
+            <li>Website: historymuseum.am</li>
+        </ul>
+        <p>Audio guides and guided tours are available in multiple languages.</p>
+
+        <h2>📸 Visitor Tips</h2>
+        <ul>
+            <li>Allow at least 1.5–2 hours for your visit</li>
+            <li>Photography is allowed in some areas (without flash)</li>
+            <li>Visit early or during weekdays to avoid crowds</li>
+            <li>Combine your visit with a trip to the National Gallery, located in the same building</li>
+        </ul>
+
+        <h2>⭐ Why It’s a Must-See</h2>
+        <p>The History Museum of Armenia isn’t just for history lovers — it’s for anyone curious about civilization, resilience, and identity. It tells the story of a nation that has survived war, empire, and exile — and has maintained its culture for over 6,000 years.</p>
+        <p>If you want to understand Armenia, this is where you start.</p>
+    </div>
+
+    <p><a href="{{ url_for('yerevan') }}">Back to Yerevan</a></p>
+{% endblock %}

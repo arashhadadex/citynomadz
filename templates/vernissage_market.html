@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Shop at Vernissage Flea Market{% endblock %}
+
+{% block content %}
+    <div class="city-image yerevan-city">
+        <img src="{{ url_for('static', filename='yerevan_shopping.webp') }}" alt="Photo of Vernissage Flea Market">
+    </div>
+
+    <h1>Shop at Vernissage Flea Market</h1>
+
+    <div class="city-description">
+        <h2>🧵 A Treasure Trove of Armenian Craftsmanship</h2>
+        <p>Vernissage Flea Market is Yerevan’s most famous open-air market, and a must-visit destination for anyone who wants to experience the art, culture, and creativity of Armenia firsthand. Open primarily on weekends, Vernissage stretches along Aram and Buzand Streets, just a short walk from Republic Square.</p>
+        <p>Here, you’ll find authentic handmade goods, from intricate carpets to delicate jewelry, traditional instruments, antiques, and art. It’s the perfect place to pick up a meaningful souvenir and support local artisans.</p>
+
+        <h2>🛒 What You Can Find</h2>
+        <h3>🎨 Handmade Crafts</h3>
+        <ul>
+            <li>Hand-painted ceramics and woodwork</li>
+            <li>Miniature khachkars (stone crosses) and religious icons</li>
+            <li>Traditional Armenian dolls, paintings, and fridge magnets</li>
+        </ul>
+        <h3>💎 Jewelry and Accessories</h3>
+        <ul>
+            <li>Authentic silver and gold pieces with Armenian motifs</li>
+            <li>Handmade beaded necklaces, bracelets, and earrings</li>
+            <li>Jewelry with semi-precious stones like obsidian and turquoise</li>
+        </ul>
+        <h3>🧺 Carpets and Textiles</h3>
+        <ul>
+            <li>Hand-woven Armenian rugs and kilims</li>
+            <li>Embroidered tablecloths, pillowcases, and scarves</li>
+        </ul>
+        <h3>📻 Antiques and Soviet Memorabilia</h3>
+        <ul>
+            <li>Vintage cameras, coins, badges, and Soviet-era trinkets</li>
+            <li>Unique vinyl records, clocks, and military collectibles</li>
+        </ul>
+
+        <h2>🧭 Location & Visiting Info</h2>
+        <ul>
+            <li>📍 Located near Republic Square, between Aram and Buzand Streets</li>
+            <li>🕗 Open on weekends (Saturday & Sunday) from around 10 AM to 5 PM</li>
+            <li>🏞️ Easily accessible by foot from most parts of central Yerevan</li>
+        </ul>
+
+        <h2>💡 Tips for Shoppers</h2>
+        <ul>
+            <li>Cash preferred – bring AMD (Armenian Dram), though some vendors accept cards</li>
+            <li>Haggling is okay – negotiate politely for better deals</li>
+            <li>Come early for the best selection and fewer crowds</li>
+            <li>Talk to the artists – many are happy to share the stories behind their work</li>
+        </ul>
+
+        <h2>🎁 Why You Should Visit</h2>
+        <p>Vernissage isn’t just a market — it’s an art gallery under the sky. It’s a window into Armenia’s creative spirit, where every stall tells a story, and every item carries a piece of heritage.</p>
+        <p>Whether you’re looking for a meaningful gift, a piece of Armenian history, or simply love exploring colorful, cultural spaces — the Vernissage Flea Market will leave you inspired.</p>
+    </div>
+
+    <p><a href="{{ url_for('yerevan') }}">Back to Yerevan</a></p>
+{% endblock %}

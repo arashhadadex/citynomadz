@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Burj Khalifa, Dubai{% endblock %}
+
+{% block content %}
+    <div class="city-image yerevan-city">
+        <img src="{{ url_for('static', filename='burj_khalifa.webp') }}" alt="Burj Khalifa">
+    </div>
+
+    <h1>Burj Khalifa</h1>
+    <hr>
+
+    <div class="city-description">
+        <h2>The World's Tallest Building</h2>
+        <p>
+            The Burj Khalifa, standing at 828 meters (2,717 feet), is the tallest building in the world and a global icon. It is a masterpiece of engineering and design, offering breathtaking views of Dubai from its observation decks.
+        </p>
+
+        <h2>Observation Decks</h2>
+        <p>
+            Visitors can experience the "At The Top" observation deck on the 124th and 125th floors, or the "At The Top SKY" on the 148th floor, which is the world's highest outdoor observation deck.
+        </p>
+
+        <h2>Dubai Fountain</h2>
+        <p>
+            At the foot of the Burj Khalifa lies the Dubai Fountain, the world's largest choreographed fountain system. It performs daily shows to music, attracting thousands of visitors.
+        </p>
+    </div>
+
+    <p><a href="{{ url_for('dubai') }}">Back to Dubai</a></p>
+{% endblock %}

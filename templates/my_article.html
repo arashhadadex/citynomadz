@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}New Blog Post{% endblock %}
+
+{% block body_class %}blog-post-page{% endblock %}
+
+{% block content %}
+    <div class="city-image">
+        <img src="{{ url_for('static', filename='digital_nomad_lifestyle.webp') }}" alt="Digital Nomad Lifestyle">
+    </div>
+
+    <h1>My New Blog Post</h1>
+    <p>This is the content of my brand new blog post. It's exciting to share new thoughts and ideas!</p>
+    <p>Stay tuned for more updates!</p>
+{% endblock %}

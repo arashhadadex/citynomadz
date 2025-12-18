@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Yerevan Info{% endblock %}
+
+{% block body_class %}yerevan-page{% endblock %}
+
+{% block content %}
+    <div class="city-image yerevan-city">
+        <!-- Placeholder for Yerevan photo -->
+        <img src="{{ url_for('static', filename='yerevan_city_pink_city.webp') }}" alt="Photo of Yerevan">
+    </div>
+
+    <h1>Pink City Yerevan, Armenia</h1>
+    <hr>
+
+    <div class="city-description">
+        <h2>About Yerevan</h2>
+        <p>
+            Yerevan, the capital of Armenia, is one of the world’s oldest cities with a history dating back to 782 BC. This vibrant and welcoming city blends ancient history with modern lifestyle. From pink-hued Soviet architecture to cozy outdoor cafes and a thriving arts scene, Yerevan offers a unique experience for visitors seeking culture, history, and hospitality in one destination.
+        </p>
+
+        <h2>Yerevan Tourist Guide</h2>
+        <p>
+            Planning your trip to Yerevan? Our Yerevan Tourist Guide covers everything you need to explore this fascinating city. Discover must-see landmarks like Republic Square, the Cascade Complex, and the History Museum of Armenia. Find the best local restaurants, cultural sites, and tips for public transportation to make your trip smooth and memorable.
+        </p>
+
+        <h2>Around Yerevan</h2>
+        <p>
+            Explore the scenic beauty and historical wonders just outside Yerevan. Take a day trip to Garni Temple, Geghard Monastery, Lake Sevan, or the ancient ruins of Zvartnots. Around Yerevan, you’ll find breathtaking landscapes, medieval monasteries, and authentic Armenian villages that enrich your travel experience beyond the city limits.
+        </p>
+
+        <h2>Yerevan Walking Tour</h2>
+        <p>
+            Experience Yerevan on foot with our detailed walking tour. Start at the iconic Republic Square, stroll through Northern Avenue, visit the Opera House, climb the Cascade for city views, and explore the hidden gems of the Kond district. Walking in Yerevan lets you connect with its heartbeat—local life, street art, and authentic flavors at every corner.
+        </p>
+
+        <h2>Cost of Living in Yerevan</h2>
+        <p>
+            Yerevan offers a very affordable lifestyle, especially for digital nomads. Expect reasonable costs for accommodation, food, and transportation, allowing for a comfortable stay without breaking the bank.
+            <a href="{{ url_for('yerevan_cost_of_living') }}">Learn more about the cost of living in Yerevan.</a>
+        </p>
+
+        <h2>Top 10 Things to Do in Yerevan</h2>
+        <ul>
+            <li><a href="{{ url_for('yerevan_subpage', page_name='cascade') }}">Climb the Cascade Complex</a> – Enjoy panoramic views of Yerevan and Mount Ararat from the top of this iconic staircase and art center.</li>
+            <li><a href="{{ url_for('yerevan_subpage', page_name='republic_square') }}">Visit Republic Square</a> – Marvel at the architecture and watch the colorful dancing fountains at night.</li>
+            <li><a href="{{ url_for('yerevan_subpage', page_name='history_museum') }}">Explore the History Museum of Armenia</a> – Discover thousands of years of Armenian history through fascinating exhibits.</li>
+            <li><a href="{{ url_for('yerevan_subpage', page_name='northern_avenue') }}">Walk along Northern Avenue</a> – A modern pedestrian street lined with shops, cafes, and live performances.</li>
+            <li><a href="{{ url_for('yerevan_subpage', page_name='opera_house') }}">Relax at the Opera House and Freedom Square</a> – A cultural hub with beautiful surroundings and great photo opportunities.</li>
+            <li><a href="{{ url_for('yerevan_subpage', page_name='vernissage_market') }}">Shop at Vernissage Flea Market</a> – Buy handmade souvenirs, carpets, jewelry, and antiques.</li>
+            <li><a href="{{ url_for('yerevan_subpage', page_name='genocide_memorial') }}">Tour the Armenian Genocide Memorial (Tsitsernakaberd)</a> – Learn about the country’s tragic past and pay respects at this solemn site.</li>
+            <li><a href="{{ url_for('yerevan_subpage', page_name='armenian_food') }}">Taste authentic Armenian food</a> – Try khorovats (barbecue), dolma, lavash bread, and local wine at traditional restaurants.</li>
+            <li><a href="{{ url_for('yerevan_subpage', page_name='lovers_park') }}">Stroll through Lovers’ Park</a> – A quiet and romantic green space ideal for a peaceful break.</li>
+            <li><a href="{{ url_for('yerevan_subpage', page_name='yerevan_nightlife') }}">Experience Yerevan’s nightlife</a> – Enjoy local music, live jazz, and rooftop bars in the city center.</li>
+        </ul>
+    </div>
+
+    <p><a href="{{ url_for('index') }}">Back to Home</a></p>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Stroll through Lovers’ Park{% endblock %}
+
+{% block content %}
+    <div class="city-image yerevan-city">
+        <img src="{{ url_for('static', filename='armenia_lovers_park.webp') }}" alt="Photo of Lovers' Park">
+    </div>
+
+    <h1>Stroll through Lovers’ Park</h1>
+
+    <div class="city-description">
+        <h2>💖 A Romantic Escape in the City</h2>
+        <p>Nestled in the center of Yerevan, Lovers’ Park is a serene and romantic oasis — the perfect place to take a break from the city’s hustle and bustle. Whether you’re a couple looking for a quiet moment or a traveler needing a peaceful escape, this beautifully landscaped park offers calm, charm, and culture.</p>
+
+        <h2>🌸 What Makes Lovers’ Park Special?</h2>
+        <h3>🌳 Lush Landscaping and Tranquil Paths</h3>
+        <p>The park is designed in the Japanese landscaping style, filled with winding paths, small waterfalls, wooden bridges, and peaceful ponds. It’s a favorite spot for relaxing walks, reading a book, or enjoying a quiet coffee on a bench.</p>
+        <h3>🎨 Cultural and Artistic Touches</h3>
+        <p>It’s not just a park — Lovers’ Park is also a cultural space. It often hosts open-air exhibitions, small concerts, and public art installations. Sculptures and modern design elements blend seamlessly with nature.</p>
+        <h3>🕊️ Perfect for Couples and Daydreamers</h3>
+        <p>True to its name, the park is a popular destination for couples. With secluded corners, cozy benches, and a romantic atmosphere, it’s ideal for meaningful conversations or simply enjoying the moment together.</p>
+
+        <h2>📍 Location & Accessibility</h2>
+        <ul>
+            <li>Address: Marshal Baghramyan Avenue, Yerevan</li>
+            <li>Nearest Metro Station: Marshal Baghramyan (just across the street)</li>
+            <li>Opening Hours: Open daily, 24 hours</li>
+            <li>Entrance Fee: Free</li>
+        </ul>
+        <p>The park is also wheelchair accessible and has well-maintained paths for easy walking.</p>
+
+        <h2>☕ Nearby Attractions</h2>
+        <ul>
+            <li>Cafes and bakeries around Baghramyan Avenue</li>
+            <li>The Armenian National Assembly and Presidential Residence</li>
+            <li>The Cascade Complex, a short 10-minute walk away</li>
+        </ul>
+
+        <h2>🌿 Why Visit Lovers’ Park?</h2>
+        <p>Whether you’re looking to:</p>
+        <ul>
+            <li>Relax with nature</li>
+            <li>Enjoy a romantic stroll</li>
+            <li>Take peaceful photos</li>
+            <li>Experience a quieter side of Yerevan</li>
+        </ul>
+        <p>Lovers’ Park is a must-visit green space that reflects the city’s love for art, nature, and peace.</p>
+    </div>
+
+    <p><a href="{{ url_for('yerevan') }}">Back to Yerevan</a></p>
+{% endblock %}

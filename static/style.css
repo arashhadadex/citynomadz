@@ -1,0 +1,964 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* Slightly lighter background */
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    line-height: 1.6; /* Ensure consistent line height across modes */
+    box-sizing: border-box; /* Ensure consistent box model */
+    font-weight: normal; /* Ensure consistent font weight for body text */
+}
+
+body.dark-mode {
+    background-color: #1a1a1a; /* Dark background for dark mode */
+    color: #f0f0f0; /* Lighter text for general body in dark mode */
+}
+
+/* Default heading styles (can be overridden by page-specific classes) */
+h1 {
+    color: #2c3e50; /* Darker blue-grey for headings */
+    font-size: 2.5em; /* Consistent size for light mode */
+    text-align: center; /* Center align headings in light mode */
+}
+
+body.dark-mode h1 {
+    color: #E0FFFF; /* Even lighter blue for main headings in dark mode */
+    /* font-size: 2.5em; Ensure consistent size in dark mode */
+}
+
+.city-image img {
+    max-width: 50%; /* Make image smaller */
+    height: auto;
+    margin-bottom: 0; /* Remove space below the image */
+    display: block; /* Center the image */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+hr {
+    width: 80%; /* Make it relative to container */
+    max-width: 800px; /* Keep a max width */
+    margin: 30px auto; /* More vertical margin */
+    border: none;
+    height: 1px;
+    background-color: #ddd; /* Lighter line color */
+}
+
+.city-description {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 0 20px;
+    font-size: 0.95em; /* Consistent with blog description */
+}
+
+.city-description p {
+    color: #555; /* Ensure consistent text color with blog description in light mode */
+}
+
+/* Default city-description h2 styles (can be overridden) */
+.city-description h2 {
+    color: #2c3e50; /* Darker blue-grey for subheadings */
+    font-size: 1.8em; /* Consistent size for light mode */
+}
+
+body.dark-mode .city-description h2 {
+    color: #E0FFFF; /* Even lighter blue for subheadings in dark mode */
+    font-size: 1.8em; /* Ensure consistent size in dark mode */
+}
+
+.city-description p {
+    margin-bottom: 15px; /* Space below paragraphs */
+}
+
+.city-description ul {
+    list-style: disc; /* Use discs for list items */
+    margin-left: 20px; /* Indent the list */
+    padding-left: 0;
+}
+
+.city-description ul li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.city-description ul li a {
+    color: #3498db; /* Blue color for links */
+    text-decoration: none;
+}
+
+.city-description ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    h1 {
+        padding: 10px 10px;
+    }
+
+    .article-content h1 {
+        font-size: 1em !important;
+    }
+
+    .city-image img {
+        max-width: 90%; /* Make image larger on smaller screens */
+    }
+
+    .city-description {
+        margin: 15px auto;
+        padding: 15px;
+        /* Removed font-size override to ensure consistency with desktop font size */
+    }
+
+    .city-description h2 {
+    }
+
+    .article-image {
+        height: 100px; /* Smaller height on mobile */
+    }
+
+    hr {
+        width: 90%;
+        margin: 20px auto;
+    }
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1em !important;
+    }
+
+    .city-description {
+        padding: 10px;
+    }
+
+    .city-description h2 {
+    }
+    .footer-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .article-image {
+        height: 150px; /* Smaller height on mobile */
+    }
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #232F3E; /* Changed to a darker blue-grey for a "midnight" feel */
+    color: #fff;
+    padding: 15px 0; /* Remove horizontal padding from the navbar itself */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: none; /* Allow container to span full width */
+    margin: 0; /* Remove auto margin */
+    padding: 0 10px; /* Set horizontal padding to approximately 1cm */
+    box-sizing: border-box; /* Ensure consistent box model */
+}
+
+.navbar .logo {
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: left; /* Ensure the logo text is aligned to the left */
+    padding-left: 0; /* Remove any extra left padding */
+}
+
+.navbar .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    padding-right: 0; /* Remove any extra right padding */
+}
+
+.navbar .nav-links li {
+    margin-left: 20px; /* Add left margin to create space between nav items */
+    /* Ensure items are vertically centered within the navbar */
+    /* Removed display: flex, align-items: center, and height: 100% as parent handles alignment */
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 1.1em; /* Slightly increase font size for desktop */
+    line-height: normal; /* Ensure consistent line height */
+}
+
+.navbar .nav-links a:hover {
+    color: #3498db; /* Brighter blue hover effect */
+}
+
+/* Hero section styles */
+.hero {
+    background: url('citynomadz.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    min-height: 700px; /* Further increased height to show more of the image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero h1 {
+    color: #fff;
+    font-size: 3.2em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.5em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    color: #fff; /* Changed to white for better visibility on hero image */
+}
+
+body.dark-mode .hero h1 {
+    font-size: 3.2em; /* Ensure consistent size in dark mode */
+    color: #fff; /* Ensure consistent color in dark mode */
+}
+
+body.dark-mode .hero p {
+    font-size: 1.5em; /* Ensure consistent size in dark mode */
+    color: #fff; /* Ensure consistent color in dark mode */
+}
+
+
+
+/* Content sections */
+.content-section {
+    padding: 50px 10px;
+    text-align: center;
+    /* Removed max-width to allow content to span full width if needed */
+    margin: 0 auto;
+}
+
+.content-section h1 {
+    margin-top: 0px;  /* or even 0 if needed */
+}
+
+
+/* Default content-section h2 styles (can be overridden) */
+.content-section h2 {
+    color: #2c3e50; /* Darker blue-grey for content section headings */
+    font-size: 2.2em; /* Consistent size for light mode */
+}
+
+body.dark-mode .content-section h2 {
+    color: #E0FFFF; /* Even lighter blue for content section headings in dark mode */
+    font-size: 2.2em; /* Ensure consistent size in dark mode */
+}
+
+.content-section p {
+    font-size: 0.95em; /* Consistent with blog description */
+    margin-bottom: 20px;
+    color: #555; /* Ensure consistent text color with blog description in light mode */
+}
+
+body.dark-mode .content-section p {
+    color: #c0c0c0; /* Consistent with blog description in dark mode */
+}
+
+.content-section.bg-light {
+    background-color: #f0f0f0;
+}
+
+/* Buttons */
+/* Default button styles (can be overridden) */
+.button {
+    display: inline-block;
+    background-color: rgba(52, 152, 219, 0.7); /* Blue color for buttons with transparency */
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: rgba(52, 152, 219, 0.9); /* Darker blue on hover with transparency */
+}
+
+/* Footer styles */
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.footer .container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+.footer-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.footer-links li a:hover {
+    text-decoration: underline;
+    color: #ddd;
+}
+
+/* Responsive adjustments for new elements */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: row; /* Ensure horizontal layout */
+        justify-content: space-between; /* Keep logo left, links right */
+    }
+
+    .navbar .logo {
+        font-size: 1.5em; /* Smaller font size for mobile logo */
+    }
+
+    .navbar .nav-links {
+        margin-top: 0; /* Reset margin for horizontal layout */
+        flex-direction: row; /* Ensure horizontal layout */
+        align-items: center; /* Align items vertically in the center */
+    }
+
+    .navbar .nav-links li {
+        margin: 10px 10px; /* Add horizontal margin for spacing */
+    }
+
+    .navbar .nav-links a {
+        /* Removed font-size override to ensure consistency with desktop nav links font size */
+    }
+
+    body.dark-mode .navbar .nav-links a {
+        color: #fff; /* Ensure white color in dark mode on mobile */
+    }
+
+    .hero h1 {
+        /* Removed font-size override to ensure consistency with desktop hero h1 font size */
+        margin-top: -50px; /* Move text higher */
+    }
+
+    .hero p {
+        /* Removed font-size override to ensure consistency with desktop hero p font size */
+        /* Removed color override to ensure consistency with desktop hero text color */
+    }
+
+
+
+
+
+    .hero {
+        min-height: 400px; /* Adjusted height for mobile */
+        background-size: cover; /* Ensure full image is shown on mobile and is wide */
+    }
+
+    .content-section {
+        padding: 40px 15px;
+    }
+
+    .content-section h2 {
+        /* Removed font-size override to ensure consistency with desktop content-section h2 font size */
+    }
+}
+
+/* Blog Posts Grid */
+.blog-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Blog Post Card Styles */
+.blog-post-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box; /* Ensure consistent box model */
+}
+
+.blog-post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.blog-post-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for square-like images */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+    border-bottom: 1px solid #eee;
+}
+
+.blog-post-card h2 {
+    color: #2c3e50; /* Darker color for blog titles */
+    font-size: 1.5em; /* Consistent size for light mode */
+}
+
+body.dark-mode .blog-post-card h2 {
+    color: #E0FFFF; /* Even lighter blue for blog titles in dark mode */
+    /* Removed layout-specific styles to ensure consistency with light mode */
+}
+
+.blog-post-card h2 a {
+    text-decoration: none;
+    color: #2c3e50;
+}
+
+.blog-post-card h2 a:hover {
+    text-decoration: underline;
+}
+
+.blog-post-card .blog-description {
+    font-size: 0.95em;
+    color: #555;
+    padding: 0 15px;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Allow description to take available space */
+}
+
+body.light-mode .blog-post-card .blog-description {
+    color: #555; /* Ensure consistent text color with default */
+}
+
+body.dark-mode .blog-post-card .blog-description {
+    color: #c0c0c0; /* Consistent with content-section in dark mode */
+}
+
+.blog-post-card .button {
+    margin-bottom: 20px;
+    align-self: center; /* Center the button */
+}
+
+/* Responsive adjustments for blog cards */
+@media (max-width: 768px) {
+    .blog-posts-grid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+        gap: 20px;
+    }
+
+    .blog-post-card h2 {
+        font-size: 1.3em; /* Standardized font size for mobile blog titles */
+    }
+    body.dark-mode .blog-post-card h2 {
+        /* font-size: 1.3em; Ensure consistent size in dark mode on mobile */
+    }
+
+    .blog-post-card .blog-description {
+    }
+}
+
+
+/* City Cards Grid */
+@media (max-width: 768px) {
+    .city-card h2,
+    .blog-post-card h2,
+    body.dark-mode .city-card h2,
+    body.dark-mode .blog-post-card h2 {
+        font-size: 1.5em !important;
+    }
+}
+.city-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* City Card Styles */
+.city-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box; /* Ensure consistent box model */
+}
+
+.city-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.city-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for square-like images */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+    border-bottom: 1px solid #eee;
+}
+
+.city-card h2 {
+    color: #2c3e50; /* Darker color for city titles */
+    font-size: 1.5em; /* Consistent size for light mode */
+}
+
+body.dark-mode .city-card h2 {
+    color: #E0FFFF; /* Even lighter blue for city titles in dark mode */
+    /* Removed layout-specific styles to ensure consistency with light mode */
+}
+
+.city-card h2 a {
+    text-decoration: none;
+    color: #2c3e50;
+}
+
+.city-card h2 a:hover {
+    text-decoration: underline;
+}
+
+body.dark-mode .city-card h2 a,
+body.dark-mode .blog-post-card h2 a {
+    color: #E0FFFF; /* Even lighter blue for links in dark mode */
+}
+
+.city-card p {
+    font-size: 0.95em;
+    color: #555;
+    padding: 0 15px;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Allow description to take available space */
+}
+
+body.dark-mode .city-card p {
+    color: #c0c0c0; /* Consistent with blog description in dark mode */
+}
+
+body.light-mode .city-card p {
+    color: #555; /* Ensure consistent text color with default */
+}
+
+body.dark-mode .city-card p,
+body.dark-mode .blog-post-card .blog-description {
+    color: #c0c0c0; /* Lighter grey for paragraph text in dark mode */
+}
+
+.city-card .button {
+    /* Removed font-size override as it's not a heading */
+    margin-bottom: 20px;
+    align-self: center; /* Center the button */
+}
+
+/* Responsive adjustments for city cards */
+@media (max-width: 768px) {
+    .city-cards-grid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+        gap: 20px;
+    }
+
+    .city-card h2 {
+        font-size: 1.3em;
+    }
+
+    .city-card p {
+        font-size: 0.9em;
+    }
+}
+
+/* Yerevan Page Specific Styles */
+.yerevan-page h1,
+.yerevan-page .city-description h2,
+.yerevan-page .content-section h2 {
+    color: #f08080; /* Pinkish color for Yerevan theme */
+}
+
+.yerevan-page .button {
+    background-color: rgba(240, 128, 128, 0.7); /* Pinkish color for buttons on Yerevan pages with transparency */
+}
+
+.yerevan-page .button:hover {
+    background-color: rgba(240, 128, 128, 0.9); /* Darker pink on hover for Yerevan pages with transparency */
+}
+
+/* Blog Page Specific Styles (already set to blue-grey/blue, no changes needed here) */
+
+/* Blog Content Centering */
+
+/* Hide hero section on blog post pages */
+body.blog-post-page .hero {
+    display: none;
+}
+.yerevan-city img {
+    display: block;
+    margin-top: 20px;
+    height: auto;
+    width: 80%;
+    border-radius: 15px; /* or any value you want */
+    overflow: hidden;    /* optional: ensures images inside are also rounded */
+    margin-bottom: 15px;
+}
+.yerevan-city {
+    display: block;
+    margin-top: 15px;
+    width: 100%;
+    border-radius: 15px; /* or any value you want */
+    overflow: hidden;    /* optional: ensures images inside are also rounded */
+    margin-bottom: -10px;
+}
+
+/* Theme Toggle Button Styles */
+.theme-toggle-button {
+    background: none;
+    border: none;
+    color: #fff; /* White color for the icon */
+    /* Removed font-size to prevent potential layout shifts, relying on fixed width/height */
+    width: 24px; /* Fixed width to prevent layout shift */
+    height: 24px; /* Fixed height to prevent layout shift */
+    display: flex; /* Use flexbox to center the icon */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 5px;
+    /* Removed margin-left as the parent li handles spacing */
+    transition: transform 0.3s ease;
+    /* Removed vertical-align: middle as flexbox on parent handles alignment */
+}
+
+.theme-toggle-button:hover {
+    transform: scale(1.1);
+}
+
+.theme-toggle-button .icon-light,
+.theme-toggle-button .icon-dark {
+    display: none; /* Hidden by default, controlled by JS */
+}
+
+.sun-icon, .moon-icon {
+    width: 100%; /* Make icon fill the button */
+    height: 100%; /* Make icon fill the button */
+    color: #fff; /* White color for the icons */
+}
+
+/* Styles for sun icon lines */
+.sun-icon line {
+    transition: stroke-dasharray 0.3s ease, stroke-dashoffset 0.3s ease;
+}
+
+/* Light mode: long lines for sun icon */
+body.light-mode .sun-icon line {
+    stroke-dasharray: 100; /* A large value to make lines appear long */
+    stroke-dashoffset: 0;
+}
+
+/* Dark mode: short lines for sun icon */
+body.dark-mode .sun-icon line {
+    stroke-dasharray: 1; /* A small value to make lines appear short */
+    stroke-dashoffset: 0;
+}
+
+.sun-icon {
+    /* Removed specific width for sun-icon as it's now handled by .sun-icon, .moon-icon */
+    height: 1em;
+    vertical-align: middle;
+}
+
+/* Styles for sun icon lines */
+.sun-icon line {
+    transition: stroke-dasharray 0.3s ease, stroke-dashoffset 0.3s ease;
+}
+
+/* Light Mode Styles (Default) */
+body.light-mode {
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+body.light-mode .navbar {
+    background-color: #232F3E;
+    color: #fff;
+}
+
+body.light-mode .navbar .nav-links a {
+    color: #fff;
+}
+
+body.light-mode .navbar .nav-links a:hover {
+    color: #3498db;
+}
+
+body.light-mode h1 {
+    color: #2c3e50;
+    font-size: 2.5em; /* Match dark mode h1 size */
+}
+
+body.light-mode .city-description h2 {
+    color: #2c3e50;
+    font-size: 1.8em; /* Match dark mode city-description h2 size */
+}
+
+body.light-mode .content-section h2 {
+    color: #2c3e50;
+    font-size: 2.2em; /* Match dark mode content-section h2 size */
+}
+
+body.light-mode .blog-post-card h2 {
+    color: #2c3e50;
+    font-size: 1.5em; /* Match dark mode blog-post-card h2 size */
+}
+
+body.light-mode .city-card h2 {
+    color: #2c3e50;
+    font-size: 1.5em; /* Match dark mode city-card h2 size */
+}
+
+body.light-mode .city-description {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .blog-post-card,
+body.light-mode .city-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .content-section.bg-light {
+    background-color: #f0f0f0;
+}
+
+body.light-mode .button {
+    background-color: rgba(52, 152, 219, 0.7);
+}
+
+body.light-mode .button:hover {
+    background-color: rgba(52, 152, 219, 0.9);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1a1a1a; /* Dark background */
+    color: #e0e0e0; /* Light text */
+}
+
+body.dark-mode .navbar {
+    background-color: #0d0d0d; /* Even darker navbar */
+    color: #f0f0f0;
+}
+
+body.dark-mode .navbar .nav-links a {
+    color: #f0f0f0;
+    font-size: 1.1em; /* Ensure consistent font size with light mode */
+}
+
+body.dark-mode .navbar .nav-links a:hover {
+    color: #66ccff; /* Lighter blue for hover */
+}
+
+body.dark-mode h1,
+body.dark-mode .city-description h2,
+body.dark-mode .content-section h2,
+body.dark-mode .blog-post-card h2,
+body.dark-mode .city-card h2 {
+    color: #99ccff; /* Lighter blue for headings */
+}
+
+body.dark-mode .city-description {
+    background-color: #2a2a2a; /* Darker background for content blocks */
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .blog-post-card,
+body.dark-mode .city-card {
+    background-color: #2a2a2a;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .content-section.bg-light {
+    background-color: #222222; /* Darker background for light sections */
+}
+
+body.dark-mode .button {
+    background-color: rgba(102, 204, 255, 0.7); /* Lighter blue for buttons with transparency */
+}
+
+body.dark-mode .button:hover {
+    background-color: rgba(102, 204, 255, 0.9); /* Even lighter blue on hover with transparency */
+}
+
+body.dark-mode hr {
+    background-color: #555; /* Darker line color */
+}
+
+/* Yerevan Page Specific Styles for Dark Mode */
+body.dark-mode .yerevan-page h1,
+body.dark-mode .yerevan-page .city-description h2,
+body.dark-mode .yerevan-page .content-section h2 {
+    color: #ff9999; /* Lighter pink for Yerevan theme in dark mode */
+}
+
+body.dark-mode .yerevan-page .button {
+    background-color: rgba(255, 153, 153, 0.7); /* Lighter pink for buttons on Yerevan pages with transparency */
+}
+
+body.dark-mode .yerevan-page .button:hover {
+    background-color: rgba(255, 153, 153, 0.9); /* Even lighter pink on hover for Yerevan pages with transparency */
+}
+body.dark-mode .city-description,
+body.dark-mode .content-section,
+body.dark-mode .blog-posts-grid {
+    color: #ffffff;
+}
+
+body.dark-mode .city-description p,
+body.dark-mode .content-section p,
+body.dark-mode .blog-posts-grid p {
+    color: #ffffff;
+}
+body.dark-mode .city-description h2,
+body.dark-mode .content-section h2,
+body.dark-mode .blog-posts-grid h2,
+body.dark-mode .city-description ul li,
+body.dark-mode .content-section ul li,
+body.dark-mode .blog-posts-grid ul li {
+    color: #ffffff;
+}
+
+.article-content {
+    font-family: Georgia, serif;
+    max-width: 720px;
+    margin: auto;
+    padding: 20px;
+    line-height: 1.7;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 1.05rem;
+}
+
+.article-content h1,
+.article-content h2,
+.article-content h3 {
+    color: var(--heading-color);
+}
+
+.article-content h1 {
+    font-size: 2.2em;
+    margin-bottom: 0.5em;
+}
+
+.article-content h2 {
+    font-size: 1.5em;
+    margin-top: 2em;
+}
+
+.article-content h3 {
+    font-size: 1.2em;
+    margin-top: 1.5em;
+}
+
+.article-content ul {
+    margin-left: 20px;
+}
+
+.article-content a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.article-content a:hover {
+    text-decoration: underline;
+}
+
+.article-content blockquote {
+    margin: 20px 0;
+    padding-left: 20px;
+    border-left: 4px solid var(--border-color);
+    color: var(--quote-color);
+}
+
+.article-image {
+    max-width: 100%;
+    width: 600px;
+    height: 550px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -10px;
+    border-radius: 10px;
+}
+h1, body.dark-mode h1 {
+    font-size: 2.5em !important;
+}
+.city-card h2,
+.blog-post-card h2,
+body.dark-mode .city-card h2,
+body.dark-mode .blog-post-card h2 {
+    font-size: 1.5em !important;
+}
+.custom-image {
+    max-width: 100%;     /* Makes it responsive */
+    width: 650px;        /* Or any fixed size you prefer */
+    height: 400px;        /* Maintains aspect ratio */
+    display: block;
+    margin: 5px 5px;   /* Center it */
+    border-radius: 20px;  /* Optional: smooth corners */
+}
+@media (max-width: 768px) {
+    .container.article-content h1 {
+        font-size: 1.6em !important;
+        line-height: 1.3;
+    }
+    .article-image {
+        height: 350px; /* Smaller height on mobile */
+    }
+}
+
+.screenshot-image {
+    max-width: 100%;
+    height: auto; /* Let it scale naturally */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    border-radius: 8px; /* Smaller rounding for UI screenshots */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: adds polish */
+    border: 1px solid #ddd; /* Optional: subtle border */
+}

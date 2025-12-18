@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}Visit Republic Square{% endblock %}
+
+{% block content %}
+    <div class="city-image yerevan-city">
+        <img src="{{ url_for('static', filename='Republic_square_yerevan.webp') }}" alt="Photo of Republic Square">
+    </div>
+
+    <h1>Visit Republic Square</h1>
+
+    <div class="city-description">
+        <h2>🇦🇲 The Beating Heart of Yerevan</h2>
+        <p>Republic Square (Հանրապետության Հրապարակ – Hanrapetut’yan Hraparak) is the central hub of Yerevan, Armenia’s capital. Designed by the visionary architect Alexander Tamanyan in the early 20th century, the square combines neoclassical style with traditional Armenian architectural motifs, making it a stunning masterpiece of urban design.</p>
+        <p>Whether you’re a first-time visitor or a lifelong local, Republic Square is a must-see landmark that captures the spirit and elegance of Yerevan.</p>
+
+        <h2>🏛 Architectural Marvel</h2>
+        <p>Surrounding the oval-shaped square are some of the city’s most important buildings, including:</p>
+        <ul>
+            <li>The History Museum of Armenia</li>
+            <li>The National Gallery of Armenia</li>
+            <li>The Government House</li>
+            <li>The Ministry of Foreign Affairs</li>
+            <li>The Marriott Armenia Hotel</li>
+        </ul>
+        <p>Each building is clad in pink and white volcanic tuff stone, a signature of Armenian architecture, giving the square a warm, glowing appearance, especially at sunset.</p>
+
+        <h2>🎶 Dancing Fountains – A Nightly Spectacle</h2>
+        <p>Every evening from spring through autumn, Republic Square transforms into a magical scene with its dancing musical fountains. Water jets move in harmony with Armenian, classical, and contemporary music while vibrant colored lights illuminate the fountain pool.</p>
+        <p>Fountain show schedule:</p>
+        <ul>
+            <li>Typically starts after sunset (around 8:00–9:00 PM)</li>
+            <li>Runs for 1–2 hours depending on the season</li>
+            <li>Free and open to the public</li>
+        </ul>
+        <p>This is one of the most beloved attractions in Yerevan—locals and tourists alike gather to enjoy the music, colors, and relaxed evening vibe.</p>
+
+        <h2>📸 A Perfect Place for Photos and Strolling</h2>
+        <ul>
+            <li>Ideal for evening walks and people-watching</li>
+            <li>Beautifully lit at night, perfect for photography</li>
+            <li>A popular place for concerts, celebrations, and national events</li>
+            <li>Located just a short walk from Northern Avenue and the Cascade Complex</li>
+        </ul>
+
+        <h2>📍 How to Get There</h2>
+        <ul>
+            <li>Location: Kentron (Central District), Yerevan</li>
+            <li>Metro: Republic Square station on the Yerevan Metro (Barekamutyun–Charbakh line)</li>
+            <li>Opening hours: Open 24/7 (fountain shows seasonal)</li>
+            <li>Admission: Free</li>
+        </ul>
+
+        <h2>🌟 Why You Should Visit</h2>
+        <p>Republic Square is more than a central plaza—it’s the cultural and political heart of Armenia. From awe-inspiring architecture to unforgettable light and fountain shows, it’s a space where history and modern life come together.</p>
+        <p>If you’re visiting Yerevan, make sure this is one of your first stops—and come back at night to see the square come alive.</p>
+    </div>
+
+    <p><a href="{{ url_for('yerevan') }}">Back to Yerevan</a></p>
+{% endblock %}

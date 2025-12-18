@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Explore Cities{% endblock %}
+
+{% block content %}
+    <div class="city-image yerevan-city">
+        <img src="{{ url_for('static', filename='city.webp') }}" alt="Cities" class="custom-image">
+    </div>
+    <section class="content-section">
+        <div class="container">
+            <h1>Explore Cities</h1>
+            <p>Here you can learn more about various cities around the world, perfect for digital nomads and tourists alike.</p>
+
+            <div class="city-cards-grid">
+                <div class="city-card">
+                    <img src="{{ url_for('static', filename='yerevan_city_pink_city.webp') }}" alt="Yerevan">
+                    <h2><a href="{{ url_for('yerevan') }}">Yerevan, Armenia</a></h2>
+                    <p>Discover the vibrant capital of Armenia, a city blending ancient history with modern charm.</p>
+                    <p><a href="{{ url_for('yerevan') }}" class="button">Learn More</a></p>
+                </div>
+                <div class="city-card">
+                    <img src="{{ url_for('static', filename='dubai.webp') }}" alt="Dubai">
+                    <h2><a href="{{ url_for('dubai') }}">Dubai, UAE</a></h2>
+                    <p>Experience the futuristic metropolis of Dubai, known for its luxury, innovation, and stunning architecture.</p>
+                    <p><a href="{{ url_for('dubai') }}" class="button">Learn More</a></p>
+                </div>
+                <!-- Add more city cards here as needed -->
+            </div>
+
+            <p><a href="{{ url_for('index') }}" class="button">Back to Home</a></p>
+        </div>
+    </section>
+{% endblock %}

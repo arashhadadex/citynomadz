@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Cost of Living in Dubai{% endblock %}
+
+{% block body_class %}dubai-page{% endblock %}
+
+{% block content %}
+    <div class="city-image yerevan-city">
+        <img src="{{ url_for('static', filename='dubai_city.webp') }}" alt="Photo of Dubai">
+    </div>
+
+    <h1>Cost of Living in Dubai</h1>
+    <hr>
+
+    <div class="city-description">
+        <h2>Accommodation</h2>
+        <p>
+            Rent in Dubai is significantly higher than in many other cities. A one-bedroom apartment in a central area can range from $1,500-$3,000 USD per month, while outside the center it might be $800-$1,500 USD.
+        </p>
+
+        <h2>Food</h2>
+        <p>
+            Dining out can be expensive, especially in upscale restaurants. A meal at a casual restaurant might cost $15-$30 USD. Groceries are also generally more expensive than in many other countries.
+        </p>
+
+        <h2>Transportation</h2>
+        <p>
+            Public transportation (metro, buses) is efficient but can be more costly than in other cities. Taxis are readily available but add up quickly. Many residents opt for ride-sharing services or personal cars.
+        </p>
+
+        <h2>Entertainment and Leisure</h2>
+        <p>
+            Dubai offers a luxurious lifestyle with many high-end entertainment options, which can be very costly. However, there are also many free or low-cost activities available.
+        </p>
+
+        <h2>Overall</h2>
+        <p>
+            Dubai is known for its high cost of living, particularly for accommodation and luxury goods. Careful budgeting is essential for those planning to live here.
+        </p>
+    </div>
+
+    <p><a href="{{ url_for('dubai') }}">Back to Dubai</a></p>
+{% endblock %}

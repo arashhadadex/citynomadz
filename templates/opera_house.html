@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Relax at the Opera House and Freedom Square{% endblock %}
+
+{% block content %}
+    <div class="city-image yerevan-city">
+        <img src="{{ url_for('static', filename='yerevan_opera_house.webp') }}" alt="Photo of Opera House and Freedom Square">
+    </div>
+
+    <h1>Relax at the Opera House and Freedom Square</h1>
+
+    <div class="city-description">
+        <h2>🎶 A Place of Art, History, and Leisure</h2>
+        <p>The Yerevan Opera Theatre, officially known as the Armenian National Academic Theatre of Opera and Ballet, is one of the most iconic buildings in Armenia. Together with the spacious Freedom Square in front of it, this area forms a cultural and social hub in the heart of the capital.</p>
+        <p>It’s not just a place for music and art — it’s where locals come to relax, couples take evening strolls, tourists gather for photos, and kids play freely. Whether you’re here for a performance or just a peaceful moment, the Opera House area offers something for everyone.</p>
+
+        <h2>🏛️ What to See and Do</h2>
+        <h3>🎼 Attend a Live Performance</h3>
+        <ul>
+            <li>Watch a world-class opera, ballet, or symphony</li>
+            <li>Enjoy performances by Armenian and international artists</li>
+            <li>Check the Opera Theatre schedule for upcoming shows</li>
+        </ul>
+        <h3>📸 Take Stunning Photos</h3>
+        <ul>
+            <li>Snap photos of the classical architecture of the Opera building</li>
+            <li>Capture the open square, water fountains, and people enjoying the space</li>
+            <li>Visit at sunset for soft golden light and beautiful scenery</li>
+        </ul>
+        <h3>🧘‍♀️ Relax and Unwind</h3>
+        <ul>
+            <li>Sit by the fountains or on the benches surrounding the square</li>
+            <li>Enjoy a snack or coffee from nearby cafés and street vendors</li>
+            <li>Listen to occasional live music from local performers</li>
+        </ul>
+
+        <h2>🧭 Location & Surroundings</h2>
+        <ul>
+            <li>Freedom Square (Azatutyan Hraparak) is located in central Yerevan, a short walk from Northern Avenue and Republic Square</li>
+            <li>Nearby attractions include Swan Lake, Tumanyan Park, and Abovyan Street</li>
+            <li>The square also connects you to Northern Avenue and the bustling center of Yerevan</li>
+        </ul>
+
+        <h2>🧳 Traveler Tips</h2>
+        <ul>
+            <li>Best Time to Visit: Late afternoon to evening for the best atmosphere</li>
+            <li>Tickets for Shows: Can be booked online or bought at the box office (affordable pricing)</li>
+            <li>Language: Most performances are in Armenian, but ballet and symphonies are universally enjoyable</li>
+        </ul>
+
+        <h2>🎨 Cultural Fun Facts</h2>
+        <ul>
+            <li>The Opera House was designed by Alexander Tamanyan, the same architect who planned Yerevan’s city layout</li>
+            <li>Opened in 1933, it has hosted famous artists like Charles Aznavour and Aram Khachaturian</li>
+            <li>Freedom Square has long been a place of expression — for art, protests, celebrations, and peaceful gatherings</li>
+        </ul>
+
+        <h2>❤️ Why Visit?</h2>
+        <p>If you want to feel the heartbeat of Yerevan — elegant, peaceful, artistic, and free — this is the place.</p>
+        <p>Whether you’re relaxing by the fountains, enjoying an evening ballet, or just passing through to soak up the atmosphere, the Opera House and Freedom Square offer a unique blend of beauty and culture in the middle of a bustling city.</p>
+    </div>
+
+    <p><a href="{{ url_for('yerevan') }}">Back to Yerevan</a></p>
+{% endblock %}

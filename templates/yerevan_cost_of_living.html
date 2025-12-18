@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Cost of Living in Yerevan{% endblock %}
+
+{% block body_class %}yerevan-page{% endblock %}
+
+{% block content %}
+    <div class="city-image yerevan-city">
+        <img src="{{ url_for('static', filename='yerevan.webp') }}" alt="Photo of Yerevan">
+    </div>
+
+    <h1>Cost of Living in Yerevan</h1>
+    <hr>
+
+    <div class="city-description">
+        <h2>Accommodation</h2>
+        <p>
+            Rent for a one-bedroom apartment in the city center can range from $300-$600 USD per month, while outside the center it might be $200-$400 USD. Utilities are generally affordable.
+        </p>
+
+        <h2>Food</h2>
+        <p>
+            Eating out is relatively inexpensive. A meal at a local restaurant can cost $5-$10 USD. Groceries are also budget-friendly, especially if you buy local produce from markets.
+        </p>
+
+        <h2>Transportation</h2>
+        <p>
+            Public transportation (metro, buses, minibuses) is very cheap, with a single ride costing around $0.20 USD. Taxis are also affordable for short distances.
+        </p>
+
+        <h2>Entertainment and Leisure</h2>
+        <p>
+            Enjoying Yerevan's vibrant nightlife, cafes, and cultural events won't break the bank. A coffee might cost $1-$2 USD, and a cinema ticket around $4-$6 USD.
+        </p>
+
+        <h2>Overall</h2>
+        <p>
+            Yerevan offers a very comfortable and affordable lifestyle, making it an attractive destination for digital nomads and long-term travelers.
+        </p>
+    </div>
+
+    <p><a href="{{ url_for('yerevan') }}">Back to Yerevan</a></p>
+{% endblock %}

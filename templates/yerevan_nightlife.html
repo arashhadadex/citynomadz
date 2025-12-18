@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}Experience Yerevan’s Nightlife{% endblock %}
+
+{% block content %}
+    <div class="city-image yerevan-city">
+        <img src="{{ url_for('static', filename='yerevan_nights_armenia.webp') }}" alt="Photo of Yerevan Nightlife">
+    </div>
+
+    <h1>Experience Yerevan’s Nightlife</h1>
+
+    <div class="city-description">
+        <h2>🎶 Feel the Rhythm of the City After Dark</h2>
+        <p>Yerevan transforms after sunset — from a relaxed daytime capital to a vibrant hub of music, dancing, and city lights. Whether you’re into smooth jazz, energetic dance floors, or laid-back rooftop lounges, Yerevan’s nightlife offers something for everyone.</p>
+
+        <h2>🎷 Live Music & Jazz Bars</h2>
+        <p>Yerevan has a growing jazz and live music scene, with many local artists performing throughout the week.</p>
+        <h3>Malkhas Jazz Club</h3>
+        <p>One of the most iconic venues in Yerevan, founded by jazz legend Levon Malkhasyan. Cozy, classy, and full of soul.</p>
+        <h3>Kami Music Club</h3>
+        <p>A sleek venue featuring live funk, soul, rock, and electronic sets.</p>
+        <h3>Stop Club</h3>
+        <p>A favorite among locals for underground rock and indie performances.</p>
+        <p>🎫 Most live music venues open around 8 PM, with performances starting by 9 or 10 PM.</p>
+
+        <h2>🍸 Rooftop Bars & Lounges</h2>
+        <p>For great city views and cocktails under the stars, head to one of Yerevan’s popular rooftop spots.</p>
+        <h3>Skybar</h3>
+        <p>Overlooking the city with Mount Ararat in the distance, this lounge offers premium drinks and a stylish atmosphere.</p>
+        <h3>Cascade Royal</h3>
+        <p>Near the Cascade Complex, with panoramic views, chill music, and local wine.</p>
+        <h3>Amigo Club</h3>
+        <p>Trendy rooftop for both tourists and locals, often hosting DJ nights and themed events.</p>
+        <p>🪩 Tip: Rooftop bars are most popular in spring and summer months when the weather is warm and skies are clear.</p>
+
+        <h2>🎧 Dance Clubs & Late-Night Hangouts</h2>
+        <p>If you’re looking to dance the night away, Yerevan won’t disappoint.</p>
+        <h3>Mezzo Club</h3>
+        <p>Combines fine dining, cocktails, and music in a luxurious setting.</p>
+        <h3>Paparazzi Club</h3>
+        <p>High-energy club with DJs spinning house, techno, and Armenian pop hits.</p>
+        <h3>El Sky Bar</h3>
+        <p>A modern nightlife hotspot with electronic beats and vibrant crowd.</p>
+        <p>⏰ Most clubs in Yerevan stay open until 2–4 AM, especially on weekends.</p>
+
+        <h2>🌙 Safe and Social Vibe</h2>
+        <p>Yerevan is known for being one of the safest capitals in the region, and the nightlife reflects that. It’s common to see people walking late into the night, enjoying the illuminated fountains, outdoor cafes, and street music.</p>
+
+        <h2>💡 Nightlife Tips</h2>
+        <ul>
+            <li>Dress code is usually smart casual, especially at upscale venues.</li>
+            <li>Taxis and rideshare apps (like Yandex or GG) are available and affordable.</li>
+            <li>Many places accept cards, but having some cash is helpful.</li>
+        </ul>
+
+        <h2>✨ Why Experience Yerevan at Night?</h2>
+        <p>Because the city comes alive with:</p>
+        <ul>
+            <li>Local energy and cultural flair</li>
+            <li>Unique music experiences</li>
+            <li>Romantic rooftop moments</li>
+            <li>Tasty cocktails and open-air vibes</li>
+        </ul>
+        <p>Don’t miss the chance to see a completely different side of Yerevan after sunset.</p>
+    </div>
+
+    <p><a href="{{ url_for('yerevan') }}">Back to Yerevan</a></p>
+{% endblock %}

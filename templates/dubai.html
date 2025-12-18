@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Dubai{% endblock %}
+
+{% block content %}
+    <div class="city-image yerevan-city">
+        <img src="{{ url_for('static', filename='dubai.webp') }}" alt="Dubai City">
+    </div>
+
+    <h1>Dubai, UAE</h1>
+    <hr>
+
+    <div class="city-description">
+        <p>Dubai is a city and emirate in the United Arab Emirates known for luxury shopping, ultramodern architecture and a lively nightlife scene.</p>
+        <p>Burj Khalifa, an 830m-tall tower, dominates the skyscraper-filled skyline. At its foot lies the Dubai Fountain, with jets and lights choreographed to music. On artificial islands just offshore is Atlantis, The Palm, a resort with water and marine-animal parks.</p>
+        <p>Burj Khalifa, an 830m-tall tower, dominates the skyscraper-filled skyline. At its foot lies the Dubai Fountain, with jets and lights choreographed to music. On artificial islands just offshore is Atlantis, The Palm, a resort with water and marine-animal parks.</p>
+
+        <h2>Top Attractions in Dubai</h2>
+        <ul>
+            <li><a href="{{ url_for('dubai_burj_khalifa') }}">Visit Burj Khalifa</a> – Ascend the world's tallest building for unparalleled views of the city.</li>
+        </ul>
+
+        <h2>Cost of Living in Dubai</h2>
+        <p>
+            Dubai is known for its high cost of living, especially for accommodation and luxury experiences. However, careful planning can help manage expenses.
+            <a href="{{ url_for('dubai_cost_of_living') }}">Learn more about the cost of living in Dubai.</a>
+        </p>
+    </div>
+    
+    <p><a href="{{ url_for('cities_home') }}">Back to Cities</a></p>
+{% endblock %}

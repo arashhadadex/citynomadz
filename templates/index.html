@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header class="hero">
+    <div class="container">
+        <h1>Welcome to citynomadz!</h1>
+        <p>Your ultimate guide to city explorations and nomad lifestyle.</p>
+    </div>
+</header>
+
+<section class="content-section">
+    <div class="container">
+        <h2>Cities</h2>
+        <p>Discover amazing cities around the world with our detailed guides.</p>
+        <p><a href="{{ url_for('yerevan') }}" class="button">Explore Yerevan</a></p>
+        <p><a href="{{ url_for('dubai') }}" class="button">Explore Dubai</a></p>
+    </div>
+</section>
+
+<section class="content-section bg-light">
+    <div class="container">
+        <h2>Blogs</h2>
+        <p>Get insights and tips for living a fulfilling digital nomad life.</p>
+        <p><a href="{{ url_for('blog_home') }}" class="button">Read Blogs</a></p>
+    </div>
+</section>
+{% endblock %}

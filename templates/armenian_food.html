@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}Taste Authentic Armenian Food{% endblock %}
+
+{% block content %}
+    <div class="city-image yerevan-city">
+        <img src="{{ url_for('static', filename='yerevan_foods.webp') }}" alt="Photo of Armenian Food">
+    </div>
+
+    <h1>Taste Authentic Armenian Food</h1>
+
+    <div class="city-description">
+        <h2>🇦🇲 A Cuisine Rooted in History, Family, and Hospitality</h2>
+        <p>Armenian cuisine is more than just food — it’s culture, celebration, and community. Whether you’re enjoying a homemade meal in a village or dining in a traditional restaurant in Yerevan, Armenian food offers bold flavors, ancient cooking methods, and heartwarming hospitality.</p>
+
+        <h2>🔥 Must-Try Dishes</h2>
+        <h3>🥩 Khorovats (Armenian Barbecue)</h3>
+        <p>Juicy, fire-grilled meat (usually pork or lamb), marinated with herbs and spices. Often served with grilled vegetables and lavash. It’s the national dish of Armenia and a staple at every celebration.</p>
+        <h3>🌿 Dolma</h3>
+        <p>Grape leaves or cabbage leaves stuffed with a savory mix of rice, ground meat, onions, and herbs. Served with a dollop of matzun (Armenian yogurt), dolma is both comforting and flavorful.</p>
+        <h3>🍞 Lavash Bread</h3>
+        <p>A UNESCO-recognized traditional flatbread, soft and paper-thin, baked in a clay oven called a tonir. It’s often used to wrap grilled meats, cheese, or fresh greens.</p>
+        <h3>🍷 Armenian Wine & Brandy</h3>
+        <p>Armenia is one of the oldest winemaking countries in the world. Taste wines made from indigenous grapes like Areni Noir, or sip the world-famous Armenian brandy, a favorite of Winston Churchill.</p>
+        <h3>🧀 Cheese & Herbs Plate</h3>
+        <p>A traditional starter with Armenian cheeses, fresh herbs (like tarragon and purple basil), radishes, and lavash.</p>
+
+        <h2>🍽️ Where to Eat in Yerevan</h2>
+        <ul>
+            <li>Tavern Yerevan (Pandok Yerevan): A top spot for traditional dishes in a cozy, folkloric atmosphere.</li>
+            <li>Lavash Restaurant: Beautiful decor and high-quality Armenian cuisine in the heart of Yerevan.</li>
+            <li>Dolmama: A pioneer in elevating Armenian food with a modern twist.</li>
+            <li>Wine Republic: Great for local wines and fusion dishes.</li>
+        </ul>
+
+        <h2>🧭 Tips for Food Lovers</h2>
+        <ul>
+            <li>Don’t skip local markets like GUM Market – perfect for trying dried fruits, sujuk (fruit leather), nuts, and cheeses.</li>
+            <li>If invited to someone’s home, say yes — home-cooked Armenian meals are an unforgettable experience.</li>
+            <li>Always try local wine with your meal — many restaurants offer tasting menus or recommendations.</li>
+        </ul>
+
+        <h2>💬 Why You Should Try Armenian Cuisine</h2>
+        <p>Eating in Armenia is an experience that goes beyond taste — it’s about tradition, generosity, and togetherness. From the smell of grilling khorovats to the warm smiles in family-run restaurants, each dish tells a story.</p>
+        <p>Whether you’re a foodie or just curious, Armenian cuisine will surprise and satisfy you with its diversity, depth, and hospitality.</p>
+    </div>
+
+    <p><a href="{{ url_for('yerevan') }}">Back to Yerevan</a></p>
+{% endblock %}

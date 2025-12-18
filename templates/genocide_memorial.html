@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}Tour the Armenian Genocide Memorial (Tsitsernakaberd){% endblock %}
+
+{% block content %}
+    <div class="city-image yerevan-city">
+        <img src="{{ url_for('static', filename='Armenian_Genocide.webp') }}" alt="Photo of Armenian Genocide Memorial">
+    </div>
+
+    <h1>Tour the Armenian Genocide Memorial (Tsitsernakaberd)</h1>
+
+    <div class="city-description">
+        <h2>📍 A National Symbol of Tragedy and Resilience</h2>
+        <p>Tsitsernakaberd, the Armenian Genocide Memorial Complex, stands on a hill overlooking Yerevan, silently honoring the memory of the 1.5 million Armenians who were killed during the Armenian Genocide of 1915, carried out by the Ottoman Empire.</p>
+        <p>It is more than a memorial — it is a symbol of survival, remembrance, and the enduring spirit of the Armenian people. Every year on April 24, thousands gather here to lay flowers and remember the lives lost.</p>
+
+        <h2>🏛️ What You’ll See at Tsitsernakaberd</h2>
+        <h3>🔥 The Eternal Flame</h3>
+        <p>At the heart of the memorial is an eternal flame, surrounded by 12 towering basalt slabs that lean inward — symbolizing the 12 lost provinces in historic Western Armenia.</p>
+        <h3>🕊️ The Memorial Wall</h3>
+        <p>A long wall engraved with the names of towns and villages affected during the genocide serves as a powerful reminder of the scale of this tragedy.</p>
+        <h3>🏛️ The Armenian Genocide Museum-Institute</h3>
+        <p>Just a short walk from the flame is a museum and research center, offering a detailed and respectful look into:</p>
+        <ul>
+            <li>Firsthand testimonies</li>
+            <li>Historical documents</li>
+            <li>Photographs and exhibits</li>
+            <li>International recognition efforts</li>
+        </ul>
+
+        <h2>🧭 Visiting Information</h2>
+        <ul>
+            <li>📍 Located on Tsitsernakaberd Hill, western Yerevan</li>
+            <li>🕒 Open Tuesday to Sunday, typically 11:00 AM – 4:00 PM</li>
+            <li>💸 Entrance is free</li>
+            <li>🎧 Guided tours and English-language materials are available</li>
+        </ul>
+
+        <h2>💡 Visitor Tips</h2>
+        <ul>
+            <li>Dress respectfully – this is a solemn place of mourning</li>
+            <li>Allow at least 1–2 hours to see both the memorial and museum</li>
+            <li>Photography is permitted, but be mindful and respectful</li>
+            <li>The surrounding park area offers peaceful views of Mount Ararat and Yerevan</li>
+        </ul>
+
+        <h2>💬 Why You Should Visit</h2>
+        <p>Visiting Tsitsernakaberd is a deeply moving experience. It helps you understand not just the pain of Armenia’s past, but the strength of its people and their journey forward. Even if you’re not Armenian, this memorial speaks to human rights, memory, and justice across the world.</p>
+        <p>Walking through this site, you’ll leave with more than just historical knowledge — you’ll carry a deeper sense of empathy, reflection, and respect.</p>
+    </div>
+
+    <p><a href="{{ url_for('yerevan') }}">Back to Yerevan</a></p>
+{% endblock %}

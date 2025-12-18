@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Climb the Cascade Complex{% endblock %}
+
+{% block content %}
+    <div class="city-image yerevan-city">
+        <img src="{{ url_for('static', filename='cascade_yerevan.webp') }}" alt="Photo of Cascade Complex">
+    </div>
+
+    <h1>Climb the Cascade Complex</h1>
+
+    <div class="city-description">
+        <h2>🏛️ A Monumental Stairway Blending Art, Architecture, and Cityscape</h2>
+        <p>The Cascade Complex, or simply “The Cascade,” is one of Yerevan’s most iconic landmarks—a monumental limestone stairway that elegantly ascends the city’s northern hills. Conceived in the 1920s by architect Alexander Tamanyan to connect the central and northern parts of Yerevan with waterfalls and green areas, the project was brought to life in the 1970s by Yerevan’s chief architect Jim Torosyan, with new perceptions and ideas.</p>
+        <p>Stretching over 302 meters and comprising 572 steps, the Cascade rises 78 meters above the city, offering a unique blend of Soviet-era monumentalism and contemporary design.</p>
+
+        <h2>🎨 Home to the Cafesjian Center for the Arts</h2>
+        <p>Embedded within the Cascade is the Cafesjian Center for the Arts, a world-class contemporary art museum. Established in 2009, the museum has gained significant popularity in Yerevan. The museum’s collection includes over 5,000 works, featuring artists like Fernando Botero, Lynn Chadwick, and Jaume Plensa.</p>
+        <p>The museum comprises two main sections: the external Cafesjian Sculpture Garden and the internal Cafesjian Art Galleries. The Sculpture Garden, located along Tamanyan Street, showcases large-scale sculptures in a beautifully landscaped setting. The Art Galleries, situated beneath the exterior staircase, house a massive collection of glass artwork and host various exhibitions and events.</p>
+
+        <h2>🌄 Breathtaking Views of Yerevan and Mount Ararat</h2>
+        <p>Ascending the Cascade rewards visitors with panoramic vistas of Yerevan’s cityscape, framed by the majestic Mount Ararat in the distance. Each level presents a new perspective of the city, and once at the top, the panoramic view of Yerevan with Mount Ararat in the background is absolutely stunning.</p>
+        <p>Whether you visit in the golden light of morning or the deep blues of sunset, the Cascade provides an unforgettable visual reward.</p>
+
+        <h2>🗺️ A Cultural and Social Hub</h2>
+        <p>Beyond its architectural and artistic significance, the Cascade serves as a vibrant social space. The surrounding area is lively, with Tamanyan Street lined with charming cafes, art galleries, and sculptures, making it an ideal spot to relax after climbing the steps.</p>
+        <p>The Cascade also hosts various events, including lectures, film screenings, and concerts, as well as extensive educational programs for all ages.</p>
+    </div>
+
+    <p><a href="{{ url_for('yerevan') }}">Back to Yerevan</a></p>
+{% endblock %}

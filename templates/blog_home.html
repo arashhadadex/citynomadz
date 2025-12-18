@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block title %}Nomad Blogs{% endblock %}
+
+{% block body_class %}blog-page{% endblock %}
+
+{% block content %}
+    <section class="content-section">
+        <div class="container">
+            <h1>Nomad Lifestyle Blogs</h1>
+            <p>Insights and stories from the digital nomad world.</p>
+
+            <div class="blog-posts-grid">
+
+                <div class="blog-post-card">
+                    <img src="{{ url_for('static', filename='greece.webp') }}" alt="greece for digitalnomadz">
+                    <h2><a href="{{ url_for('blog_post', blog_name='greece_for_digitalnomadz') }}">Living the Dream: Why Greece is the Ultimate Destination for Digital Nomads.</a></h2>
+                    <p class="blog-description">If you're a digital nomad or an expat searching for a blend of rich history, vibrant culture, and a relaxed lifestyle. Greece should be at the top of your list</p>
+                    <p><a href="{{ url_for('blog_post', blog_name='greece_for_digitalnomadz') }}" class="button">Read More</a></p>
+                </div>
+
+                <div class="blog-post-card">
+                    <img src="{{ url_for('static', filename='airport.webp') }}" alt="international trip lessons">
+                    <h2><a href="{{ url_for('blog_post', blog_name='international_trip_lessons') }}">Travel Reflections: Lessons from a Short International Trip.</a></h2>
+                    <p class="blog-description">A short international trip compresses the world's lessons into a brief yet impactful span of time..</p>
+                    <p><a href="{{ url_for('blog_post', blog_name='international_trip_lessons') }}" class="button">Read More</a></p>
+                </div>
+
+
+                <div class="blog-post-card">
+                    <img src="{{ url_for('static', filename='yerevan.webp') }}" alt="yerevan city">
+                    <h2><a href="{{ url_for('blog_post', blog_name='yerevan_travel_experience') }}">It started with a flight I booked with one of my friend back in jan,2025.</a></h2>
+                    <p class="blog-description">I needed a break - and ended up finding a city that felt like a home.</p>
+                    <p><a href="{{ url_for('blog_post', blog_name='yerevan_travel_experience') }}" class="button">Read More</a></p>
+                </div>
+
+
+                <div class="blog-post-card">
+                    <img src="{{ url_for('static', filename='Why_Camping_Might_Be_the_Answer.webp') }}" alt="Camping for Peace">
+                    <h2><a href="{{ url_for('blog_post', blog_name='Why_Camping_Might_Be_the_Answer') }}">🏕️ The Road to Peace Isn't Paved: Why Camping Might Be the Answer</a></h2>
+                    <p class="blog-description">Ever feel like you're always on the go but never really getting anywhere? Maybe nature has the answer...</p>
+                    <p><a href="{{ url_for('blog_post', blog_name='Why_Camping_Might_Be_the_Answer') }}" class="button">Read More</a></p>
+                </div>
+
+                <div class="blog-post-card">
+                    <img src="{{ url_for('static', filename='Best Countries for Digital Nomads in 2025.webp') }}" alt="Best Countries for Digital Nomads">
+                    <h2><a href="{{ url_for('blog_post', blog_name='best_countries_for_digital_nomads_in_2025') }}">Best Countries for Digital Nomads in 2025</a></h2>
+                    <p class="blog-description">Discover the top countries for digital nomads in 2025, offering the best blend of lifestyle, cost of living, and work-life balance.</p>
+                    <p><a href="{{ url_for('blog_post', blog_name='best_countries_for_digital_nomads_in_2025') }}" class="button">Read More</a></p>
+                </div>
+                
+                <div class="blog-post-card">
+                    <img src="{{ url_for('static', filename='crypto-digital-nomad.webp') }}" alt="Crypto Travel Article">
+                    <h2><a href="{{ url_for('blog_post', blog_name='crypto-travel-article') }}">Crypto Travel: How to Travel the World with Cryptocurrency</a></h2>
+                    <p class="blog-description">Explore the exciting world of crypto travel and learn how to use cryptocurrencies for your adventures around the globe. From booking flights to daily expenses, discover the benefits and challenges of a decentralized travel experience.</p>
+                    <p><a href="{{ url_for('blog_post', blog_name='crypto-travel-article') }}" class="button">Read More</a></p>
+                </div>
+
+                <div class="blog-post-card">
+                    <img src="{{ url_for('static', filename='digital_nomad_lifestyle.webp') }}" alt="Nomad Living">
+                    <h2><a href="{{ url_for('blog_post', blog_name='nomad_living') }}">Nomad Living – Disadvantages of the Lifestyle & Home Truths</a></h2>
+                    <p class="blog-description">The nomadic lifestyle isn’t for everyone. Travelling and “working from anywhere” sounds appealing to many. But the truth is, managing a business on the road is a long-term path that few truly thrive on. It takes a certain kind of person to handle the physical and mental challenges that constant travel brings.</p>
+                    <p><a href="{{ url_for('blog_post', blog_name='nomad_living') }}" class="button">Read More</a></p>
+                </div>
+
+                <!-- Add more blog post cards here as needed -->
+                <div class="blog-post-card">
+                    <img src="{{ url_for('static', filename='digital_life_digital_nomad.webp') }}" alt="Digital Nomad Productivity">
+                    <h2><a href="{{ url_for('blog_post', blog_name='digital_nomad_productivity') }}">Digital Nomad Productivity: 7 Habits to Make Remote Work Actually Work</a></h2>
+                    <p class="blog-description">Let’s be real, working online sounds like a dream. Laptop on a beach, coffee in hand, your office wherver you have Wi-Fi.</p>
+                    <p><a href="{{ url_for('blog_post', blog_name='digital_nomad_productivity') }}" class="button">Read More</a></p>
+                </div>
+            </div>
+
+            <p><a href="{{ url_for('index') }}" class="button">Back to Home</a></p>
+        </div>
+    </section>
+{% endblock %}
